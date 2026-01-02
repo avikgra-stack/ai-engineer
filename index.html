@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-      body { font-family: 'Inter', sans-serif; background-color: #030712; color: white; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Настройка Tailwind, чтобы он понимал ваши кастомные цвета из AI Studio
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
