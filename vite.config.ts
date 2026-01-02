@@ -3,11 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ai-engineer/',
+  base: '/ai-engineer/', // Имя вашего репозитория
   build: {
-    rollupOptions: {
-      // Это предотвратит ошибки сборки из-за внешних ссылок esm.sh
-      external: ['react', 'react-dom', 'lucide-react', '@google/genai'],
-    },
-  },
+    outDir: 'dist',
+  }
 })
