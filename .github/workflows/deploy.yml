@@ -1,8 +1,8 @@
-name: Deploy static content to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Убедитесь, что ваша ветка называется main
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -19,22 +19,18 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 // Строку ниже (cache: 'npm') нужно убрать или закомментировать !!!
-          //cache: 'npm'
+          node-version: 20
 
       - name: Install dependencies
+        # Мы используем npm install, он сам создаст всё необходимое в процессе
         run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite по умолчанию собирает проект в папку dist
           path: './dist'
 
       - name: Deploy to GitHub Pages
