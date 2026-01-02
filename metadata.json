@@ -1,0 +1,7 @@
+{
+  "name": "AI Dev Portfolio",
+  "description": "A high-performance landing page for an AI Engineer featuring a digital twin chatbot and AI project brainstormer.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
